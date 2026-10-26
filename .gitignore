@@ -1,2 +1,6 @@
 build/**
 sim/tests/benchmarks/coremark/src/**
+
+# Служебные файлы macOS
+.DS_Store
+._*

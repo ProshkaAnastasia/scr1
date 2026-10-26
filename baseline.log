@@ -1,0 +1,998 @@
+rm -f /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/test_info
+mkdir -p /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0
+rm -f /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/*.hex
+make -C /work/scr1/sim/tests/riscv_isa ARCH=imc
+make[1]: Entering directory '/work/scr1/sim/tests/riscv_isa'
+mkdir -p /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/add.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/add.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/add.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/add.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/add.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/addi.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/addi.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/addi.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/addi.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/addi.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/and.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/and.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/and.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/and.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/and.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/andi.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/andi.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/andi.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/andi.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/andi.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/auipc.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/auipc.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/auipc.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/auipc.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/auipc.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/beq.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/beq.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/beq.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/beq.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/beq.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/bge.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/bge.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/bge.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bge.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bge.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/bgeu.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/bgeu.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/bgeu.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bgeu.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bgeu.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/blt.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/blt.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/blt.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/blt.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/blt.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/bltu.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/bltu.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/bltu.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bltu.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bltu.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/bne.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/bne.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/bne.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bne.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bne.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32mi/csr.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/csr.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/csr.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/csr.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/csr.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/fence_i.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/fence_i.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/fence_i.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/fence_i.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/fence_i.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32mi/illegal.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/illegal.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/illegal.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/illegal.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/illegal.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/jal.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/jal.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/jal.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/jal.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/jal.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/jalr.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/jalr.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/jalr.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/jalr.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/jalr.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/lb.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/lb.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/lb.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lb.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lb.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/lbu.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/lbu.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/lbu.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lbu.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lbu.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/lh.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/lh.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/lh.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lh.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lh.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/lhu.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/lhu.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/lhu.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lhu.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lhu.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/lui.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/lui.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/lui.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lui.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lui.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/lw.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/lw.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/lw.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lw.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lw.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32mi/ma_addr.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/ma_addr.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/ma_addr.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/ma_addr.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/ma_addr.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32mi/ma_fetch.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/ma_fetch.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/ma_fetch.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/ma_fetch.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/ma_fetch.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32mi/mcsr.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/mcsr.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/mcsr.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mcsr.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mcsr.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/or.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/or.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/or.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/or.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/or.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/ori.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/ori.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/ori.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/ori.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/ori.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/sb.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/sb.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/sb.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sb.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sb.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32mi/sbreak.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/sbreak.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/sbreak.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sbreak.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sbreak.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32mi/scall.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/scall.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/scall.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/scall.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/scall.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/sh.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/sh.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/sh.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sh.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sh.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32mi/shamt.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/shamt.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/shamt.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/shamt.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/shamt.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/simple.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/simple.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/simple.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/simple.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/simple.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/sll.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/sll.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/sll.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sll.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sll.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/slli.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/slli.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/slli.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/slli.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/slli.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/slt.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/slt.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/slt.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/slt.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/slt.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/slti.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/slti.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/slti.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/slti.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/slti.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/sltiu.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/sltiu.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/sltiu.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sltiu.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sltiu.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/sltu.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/sltu.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/sltu.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sltu.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sltu.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/sra.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/sra.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/sra.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sra.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sra.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/srai.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/srai.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/srai.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/srai.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/srai.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/srl.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/srl.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/srl.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/srl.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/srl.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/srli.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/srli.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/srli.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/srli.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/srli.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/sub.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/sub.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/sub.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sub.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sub.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/sw.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/sw.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/sw.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sw.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sw.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/xor.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/xor.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/xor.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/xor.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/xor.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32ui/xori.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/xori.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/xori.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/xori.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/xori.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32um/div.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/div.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/div.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/div.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/div.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32um/divu.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/divu.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/divu.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/divu.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/divu.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32um/mul.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/mul.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/mul.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mul.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mul.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32um/mulh.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/mulh.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/mulh.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mulh.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mulh.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32um/mulhsu.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/mulhsu.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/mulhsu.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mulhsu.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mulhsu.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32um/mulhu.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/mulhu.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/mulhu.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mulhu.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mulhu.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32um/rem.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/rem.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/rem.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/rem.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/rem.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32um/remu.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/remu.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/remu.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/remu.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/remu.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-gcc -c /work/scr1/sim/tests/riscv_isa/../../../dependencies/riscv-tests/isa/rv32uc/rvc.S -I/work/scr1/sim/tests/common -I/work/scr1/sim/tests/riscv_isa -DASM -Wa,-march=rv32imfc_zicsr_zifencei -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -D__riscv_xlen=32 -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/rvc.o
+riscv64-unknown-elf-gcc /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/riscv_objs/rvc.o -static -fvisibility=hidden -nostdlib -nostartfiles -T/work/scr1/sim/tests/common/link.ld -march=rv32imfc_zicsr_zifencei -mabi=ilp32f -o /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/rvc.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/rvc.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/add.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/add.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/addi.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/addi.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/and.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/and.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/andi.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/andi.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/auipc.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/auipc.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/beq.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/beq.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bge.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bge.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bgeu.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bgeu.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/blt.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/blt.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bltu.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bltu.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bne.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bne.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/csr.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/csr.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/fence_i.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/fence_i.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/illegal.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/illegal.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/jal.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/jal.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/jalr.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/jalr.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lb.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lb.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lbu.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lbu.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lh.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lh.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lhu.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lhu.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lui.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lui.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lw.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lw.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/ma_addr.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/ma_addr.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/ma_fetch.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/ma_fetch.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mcsr.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mcsr.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/or.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/or.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/ori.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/ori.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sb.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sb.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sbreak.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sbreak.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/scall.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/scall.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sh.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sh.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/shamt.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/shamt.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/simple.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/simple.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sll.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sll.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/slli.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/slli.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/slt.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/slt.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/slti.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/slti.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sltiu.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sltiu.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sltu.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sltu.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sra.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sra.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/srai.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/srai.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/srl.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/srl.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/srli.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/srli.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sub.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sub.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sw.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sw.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/xor.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/xor.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/xori.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/xori.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/div.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/div.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/divu.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/divu.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mul.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mul.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mulh.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mulh.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mulhsu.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mulhsu.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mulhu.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mulhu.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/rem.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/rem.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/remu.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/remu.hex
+riscv64-unknown-elf-objcopy -O verilog /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/rvc.elf /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/rvc.hex
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/add.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/add.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/addi.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/addi.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/and.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/and.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/andi.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/andi.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/auipc.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/auipc.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/beq.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/beq.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bge.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bge.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bgeu.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bgeu.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/blt.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/blt.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bltu.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bltu.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bne.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/bne.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/csr.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/csr.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/fence_i.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/fence_i.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/illegal.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/illegal.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/jal.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/jal.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/jalr.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/jalr.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lb.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lb.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lbu.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lbu.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lh.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lh.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lhu.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lhu.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lui.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lui.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lw.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/lw.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/ma_addr.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/ma_addr.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/ma_fetch.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/ma_fetch.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mcsr.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mcsr.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/or.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/or.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/ori.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/ori.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sb.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sb.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sbreak.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sbreak.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/scall.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/scall.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sh.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sh.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/shamt.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/shamt.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/simple.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/simple.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sll.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sll.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/slli.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/slli.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/slt.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/slt.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/slti.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/slti.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sltiu.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sltiu.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sltu.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sltu.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sra.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sra.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/srai.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/srai.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/srl.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/srl.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/srli.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/srli.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sub.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sub.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sw.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sw.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/xor.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/xor.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/xori.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/xori.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/div.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/div.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/divu.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/divu.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mul.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mul.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mulh.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mulh.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mulhsu.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mulhsu.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mulhu.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/mulhu.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/rem.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/rem.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/remu.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/remu.dump
+riscv64-unknown-elf-objdump -D -D -w -x -S /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/rvc.elf > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/rvc.dump
+make[1]: Leaving directory '/work/scr1/sim/tests/riscv_isa'
+cd /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0
+make -C /work/scr1/sim build_verilator SIM_CFG_DEF=SCR1_CFG_RV32IMC_MAX SIM_TRACE_DEF=SCR1_TRACE_LOG_DIS SIM_BUILD_OPTS="";
+make[1]: Entering directory '/work/scr1/sim'
+cd /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0; \
+verilator \
+-cc \
+-sv \
++1800-2017ext+sv \
+-Wno-fatal \
+--no-timing  \
+--top-module scr1_top_tb_ahb \
+-DSCR1_TRGT_SIMULATION \
+-DSCR1_TRACE_LOG_DIS \
+-DSCR1_CFG_RV32IMC_MAX \
+--clk clk \
+--exe /work/scr1/sim/verilator_wrap/scr1_ahb_wrapper.c \
+--Mdir /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/verilator \
+-I/work/scr1/src/includes \
+-I/work/scr1/src/tb \
+ \
+/work/scr1/src/core/pipeline/scr1_pipe_hdu.sv /work/scr1/src/core/pipeline/scr1_pipe_tdu.sv /work/scr1/src/core/pipeline/scr1_ipic.sv /work/scr1/src/core/pipeline/scr1_pipe_csr.sv /work/scr1/src/core/pipeline/scr1_pipe_exu.sv /work/scr1/src/core/pipeline/scr1_pipe_ialu.sv /work/scr1/src/core/pipeline/scr1_pipe_idu.sv /work/scr1/src/core/pipeline/scr1_pipe_ifu.sv /work/scr1/src/core/pipeline/scr1_pipe_lsu.sv /work/scr1/src/core/pipeline/scr1_pipe_mprf.sv /work/scr1/src/core/pipeline/scr1_pipe_top.sv /work/scr1/src/core/primitives/scr1_reset_cells.sv /work/scr1/src/core/primitives/scr1_cg.sv /work/scr1/src/core/scr1_clk_ctrl.sv /work/scr1/src/core/scr1_tapc_shift_reg.sv /work/scr1/src/core/scr1_tapc.sv /work/scr1/src/core/scr1_tapc_synchronizer.sv /work/scr1/src/core/scr1_core_top.sv /work/scr1/src/core/scr1_dm.sv /work/scr1/src/core/scr1_dmi.sv /work/scr1/src/core/scr1_scu.sv /work/scr1/src/top/scr1_dmem_router.sv /work/scr1/src/top/scr1_imem_router.sv /work/scr1/src/top/scr1_dp_memory.sv /work/scr1/src/top/scr1_tcm.sv /work/scr1/src/top/scr1_timer.sv /work/scr1/src/top/scr1_dmem_ahb.sv /work/scr1/src/top/scr1_imem_ahb.sv /work/scr1/src/top/scr1_top_ahb.sv /work/scr1/src/core/pipeline/scr1_tracelog.sv /work/scr1/src/tb/scr1_memory_tb_ahb.sv /work/scr1/src/tb/scr1_top_tb_ahb.sv; \
+cd verilator; \
+make -f Vscr1_top_tb_ahb.mk;
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_hdu.svh:21:25: Operator VAR 'SCR1_HDU_DEBUGCSR_ADDR_SPAN' expects 32 bits on the Initial value, but Initial value's VARREF 'SCR1_CSR_ADDR_HDU_MSPAN' generates 12 bits.
+                                                                : ... note: In instance 'scr1_top_tb_ahb'
+   21 | localparam int unsigned SCR1_HDU_DEBUGCSR_ADDR_SPAN      = SCR1_CSR_ADDR_HDU_MSPAN;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      /work/scr1/src/core/pipeline/scr1_pipe_hdu.sv:37:1: ... note: In file included from 'scr1_pipe_hdu.sv'
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.030
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dmi.sv:70:41: Operator ADD expects 32 or 5 bits on the RHS, but RHS's VARREF 'SCR1_DBG_DMI_OP_WIDTH' generates 2 bits.
+                                                           : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dmi'
+   70 | localparam    DMI_OP_HI   = DMI_OP_LO   + SCR1_DBG_DMI_OP_WIDTH   - 1;
+      |                                         ^
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_dm.svh:19:76: Operator ADD expects 6 bits on the LHS, but LHS's VARREF 'SCR1_DBG_DMI_OP_WIDTH' generates 2 bits.
+                                                               : ... note: In instance 'scr1_top_tb_ahb'
+   19 | parameter SCR1_DBG_DMI_DR_DMI_ACCESS_WIDTH         = SCR1_DBG_DMI_OP_WIDTH +
+      |                                                                            ^
+                      /work/scr1/src/core/scr1_tapc.sv:31:1: ... note: In file included from 'scr1_tapc.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_hdu.svh:123:99: Operator ADD expects 12 bits on the RHS, but RHS's VARREF 'SCR1_HDU_DBGCSR_OFFS_DPC' generates 2 bits.
+                                                                 : ... note: In instance 'scr1_top_tb_ahb'
+  123 | localparam bit [SCR1_CSR_ADDR_WIDTH-1:0] SCR1_HDU_DBGCSR_ADDR_DPC       = SCR1_CSR_ADDR_HDU_MBASE + SCR1_HDU_DBGCSR_OFFS_DPC;
+      |                                                                                                   ^
+                      /work/scr1/src/core/pipeline/scr1_pipe_hdu.sv:37:1: ... note: In file included from 'scr1_pipe_hdu.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_hdu.svh:124:99: Operator ADD expects 12 bits on the RHS, but RHS's VARREF 'SCR1_HDU_DBGCSR_OFFS_DSCRATCH0' generates 2 bits.
+                                                                 : ... note: In instance 'scr1_top_tb_ahb'
+  124 | localparam bit [SCR1_CSR_ADDR_WIDTH-1:0] SCR1_HDU_DBGCSR_ADDR_DSCRATCH0 = SCR1_CSR_ADDR_HDU_MBASE + SCR1_HDU_DBGCSR_OFFS_DSCRATCH0;
+      |                                                                                                   ^
+                      /work/scr1/src/core/pipeline/scr1_pipe_hdu.sv:37:1: ... note: In file included from 'scr1_pipe_hdu.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_csr.svh:118:65: Operator SHIFTL expects 32 bits on the LHS, but LHS's VARREF 'SCR1_MISA_MXL_32' generates 2 bits.
+                                                                 : ... note: In instance 'scr1_top_tb_ahb'
+  118 | parameter bit [32-1:0]  SCR1_CSR_MISA       = (SCR1_MISA_MXL_32 << (32-2))
+      |                                                                 ^~
+                      /work/scr1/src/includes/scr1_hdu.svh:12:1: ... note: In file included from 'scr1_hdu.svh'
+                      /work/scr1/src/core/pipeline/scr1_pipe_hdu.sv:37:1: ... note: In file included from 'scr1_pipe_hdu.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_csr.svh:82:96: Operator ADD expects 12 bits on the RHS, but RHS's VARREF 'SCR1_IPIC_CISV' generates 3 bits.
+                                                                : ... note: In instance 'scr1_top_tb_ahb'
+   82 | parameter bit [SCR1_CSR_ADDR_WIDTH-1:0] SCR1_CSR_ADDR_IPIC_CISV     = (SCR1_CSR_ADDR_IPIC_BASE + SCR1_IPIC_CISV );
+      |                                                                                                ^
+                      /work/scr1/src/includes/scr1_hdu.svh:12:1: ... note: In file included from 'scr1_hdu.svh'
+                      /work/scr1/src/core/pipeline/scr1_pipe_hdu.sv:37:1: ... note: In file included from 'scr1_pipe_hdu.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_csr.svh:83:96: Operator ADD expects 12 bits on the RHS, but RHS's VARREF 'SCR1_IPIC_CICSR' generates 3 bits.
+                                                                : ... note: In instance 'scr1_top_tb_ahb'
+   83 | parameter bit [SCR1_CSR_ADDR_WIDTH-1:0] SCR1_CSR_ADDR_IPIC_CICSR    = (SCR1_CSR_ADDR_IPIC_BASE + SCR1_IPIC_CICSR);
+      |                                                                                                ^
+                      /work/scr1/src/includes/scr1_hdu.svh:12:1: ... note: In file included from 'scr1_hdu.svh'
+                      /work/scr1/src/core/pipeline/scr1_pipe_hdu.sv:37:1: ... note: In file included from 'scr1_pipe_hdu.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_csr.svh:84:96: Operator ADD expects 12 bits on the RHS, but RHS's VARREF 'SCR1_IPIC_IPR' generates 3 bits.
+                                                                : ... note: In instance 'scr1_top_tb_ahb'
+   84 | parameter bit [SCR1_CSR_ADDR_WIDTH-1:0] SCR1_CSR_ADDR_IPIC_IPR      = (SCR1_CSR_ADDR_IPIC_BASE + SCR1_IPIC_IPR  );
+      |                                                                                                ^
+                      /work/scr1/src/includes/scr1_hdu.svh:12:1: ... note: In file included from 'scr1_hdu.svh'
+                      /work/scr1/src/core/pipeline/scr1_pipe_hdu.sv:37:1: ... note: In file included from 'scr1_pipe_hdu.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_csr.svh:85:96: Operator ADD expects 12 bits on the RHS, but RHS's VARREF 'SCR1_IPIC_ISVR' generates 3 bits.
+                                                                : ... note: In instance 'scr1_top_tb_ahb'
+   85 | parameter bit [SCR1_CSR_ADDR_WIDTH-1:0] SCR1_CSR_ADDR_IPIC_ISVR     = (SCR1_CSR_ADDR_IPIC_BASE + SCR1_IPIC_ISVR );
+      |                                                                                                ^
+                      /work/scr1/src/includes/scr1_hdu.svh:12:1: ... note: In file included from 'scr1_hdu.svh'
+                      /work/scr1/src/core/pipeline/scr1_pipe_hdu.sv:37:1: ... note: In file included from 'scr1_pipe_hdu.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_csr.svh:86:96: Operator ADD expects 12 bits on the RHS, but RHS's VARREF 'SCR1_IPIC_EOI' generates 3 bits.
+                                                                : ... note: In instance 'scr1_top_tb_ahb'
+   86 | parameter bit [SCR1_CSR_ADDR_WIDTH-1:0] SCR1_CSR_ADDR_IPIC_EOI      = (SCR1_CSR_ADDR_IPIC_BASE + SCR1_IPIC_EOI  );
+      |                                                                                                ^
+                      /work/scr1/src/includes/scr1_hdu.svh:12:1: ... note: In file included from 'scr1_hdu.svh'
+                      /work/scr1/src/core/pipeline/scr1_pipe_hdu.sv:37:1: ... note: In file included from 'scr1_pipe_hdu.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_csr.svh:87:96: Operator ADD expects 12 bits on the RHS, but RHS's VARREF 'SCR1_IPIC_SOI' generates 3 bits.
+                                                                : ... note: In instance 'scr1_top_tb_ahb'
+   87 | parameter bit [SCR1_CSR_ADDR_WIDTH-1:0] SCR1_CSR_ADDR_IPIC_SOI      = (SCR1_CSR_ADDR_IPIC_BASE + SCR1_IPIC_SOI  );
+      |                                                                                                ^
+                      /work/scr1/src/includes/scr1_hdu.svh:12:1: ... note: In file included from 'scr1_hdu.svh'
+                      /work/scr1/src/core/pipeline/scr1_pipe_hdu.sv:37:1: ... note: In file included from 'scr1_pipe_hdu.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_csr.svh:88:96: Operator ADD expects 12 bits on the RHS, but RHS's VARREF 'SCR1_IPIC_IDX' generates 3 bits.
+                                                                : ... note: In instance 'scr1_top_tb_ahb'
+   88 | parameter bit [SCR1_CSR_ADDR_WIDTH-1:0] SCR1_CSR_ADDR_IPIC_IDX      = (SCR1_CSR_ADDR_IPIC_BASE + SCR1_IPIC_IDX  );
+      |                                                                                                ^
+                      /work/scr1/src/includes/scr1_hdu.svh:12:1: ... note: In file included from 'scr1_hdu.svh'
+                      /work/scr1/src/core/pipeline/scr1_pipe_hdu.sv:37:1: ... note: In file included from 'scr1_pipe_hdu.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_csr.svh:89:96: Operator ADD expects 12 bits on the RHS, but RHS's VARREF 'SCR1_IPIC_ICSR' generates 3 bits.
+                                                                : ... note: In instance 'scr1_top_tb_ahb'
+   89 | parameter bit [SCR1_CSR_ADDR_WIDTH-1:0] SCR1_CSR_ADDR_IPIC_ICSR     = (SCR1_CSR_ADDR_IPIC_BASE + SCR1_IPIC_ICSR );
+      |                                                                                                ^
+                      /work/scr1/src/includes/scr1_hdu.svh:12:1: ... note: In file included from 'scr1_hdu.svh'
+                      /work/scr1/src/core/pipeline/scr1_pipe_hdu.sv:37:1: ... note: In file included from 'scr1_pipe_hdu.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_hdu.svh:122:99: Operator ADD expects 12 bits on the RHS, but RHS's VARREF 'SCR1_HDU_DBGCSR_OFFS_DCSR' generates 2 bits.
+                                                                 : ... note: In instance 'scr1_top_tb_ahb'
+  122 | localparam bit [SCR1_CSR_ADDR_WIDTH-1:0] SCR1_HDU_DBGCSR_ADDR_DCSR      = SCR1_CSR_ADDR_HDU_MBASE + SCR1_HDU_DBGCSR_OFFS_DCSR;
+      |                                                                                                   ^
+                      /work/scr1/src/core/pipeline/scr1_pipe_hdu.sv:37:1: ... note: In file included from 'scr1_pipe_hdu.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_hdu.svh:125:99: Operator ADD expects 12 bits on the RHS, but RHS's VARREF 'SCR1_HDU_DBGCSR_OFFS_DSCRATCH1' generates 2 bits.
+                                                                 : ... note: In instance 'scr1_top_tb_ahb'
+  125 | localparam bit [SCR1_CSR_ADDR_WIDTH-1:0] SCR1_HDU_DBGCSR_ADDR_DSCRATCH1 = SCR1_CSR_ADDR_HDU_MBASE + SCR1_HDU_DBGCSR_OFFS_DSCRATCH1;
+      |                                                                                                   ^
+                      /work/scr1/src/core/pipeline/scr1_pipe_hdu.sv:37:1: ... note: In file included from 'scr1_pipe_hdu.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_tdu.svh:36:99: Operator ADD expects 12 bits on the RHS, but RHS's VARREF 'SCR1_CSR_ADDR_TDU_OFFS_TSELECT' generates 3 bits.
+                                                                : ... note: In instance 'scr1_top_tb_ahb'
+   36 | parameter bit [SCR1_CSR_ADDR_WIDTH-1:0] SCR1_CSR_ADDR_TDU_TSELECT       = SCR1_CSR_ADDR_TDU_MBASE + SCR1_CSR_ADDR_TDU_OFFS_TSELECT;
+      |                                                                                                   ^
+                      /work/scr1/src/core/pipeline/scr1_pipe_tdu.sv:36:1: ... note: In file included from 'scr1_pipe_tdu.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_tdu.svh:37:99: Operator ADD expects 12 bits on the RHS, but RHS's VARREF 'SCR1_CSR_ADDR_TDU_OFFS_TDATA1' generates 3 bits.
+                                                                : ... note: In instance 'scr1_top_tb_ahb'
+   37 | parameter bit [SCR1_CSR_ADDR_WIDTH-1:0] SCR1_CSR_ADDR_TDU_TDATA1        = SCR1_CSR_ADDR_TDU_MBASE + SCR1_CSR_ADDR_TDU_OFFS_TDATA1;
+      |                                                                                                   ^
+                      /work/scr1/src/core/pipeline/scr1_pipe_tdu.sv:36:1: ... note: In file included from 'scr1_pipe_tdu.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_tdu.svh:38:99: Operator ADD expects 12 bits on the RHS, but RHS's VARREF 'SCR1_CSR_ADDR_TDU_OFFS_TDATA2' generates 3 bits.
+                                                                : ... note: In instance 'scr1_top_tb_ahb'
+   38 | parameter bit [SCR1_CSR_ADDR_WIDTH-1:0] SCR1_CSR_ADDR_TDU_TDATA2        = SCR1_CSR_ADDR_TDU_MBASE + SCR1_CSR_ADDR_TDU_OFFS_TDATA2;
+      |                                                                                                   ^
+                      /work/scr1/src/core/pipeline/scr1_pipe_tdu.sv:36:1: ... note: In file included from 'scr1_pipe_tdu.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_tdu.svh:39:99: Operator ADD expects 12 bits on the RHS, but RHS's VARREF 'SCR1_CSR_ADDR_TDU_OFFS_TINFO' generates 3 bits.
+                                                                : ... note: In instance 'scr1_top_tb_ahb'
+   39 | parameter bit [SCR1_CSR_ADDR_WIDTH-1:0] SCR1_CSR_ADDR_TDU_TINFO         = SCR1_CSR_ADDR_TDU_MBASE + SCR1_CSR_ADDR_TDU_OFFS_TINFO;
+      |                                                                                                   ^
+                      /work/scr1/src/core/pipeline/scr1_pipe_tdu.sv:36:1: ... note: In file included from 'scr1_pipe_tdu.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_tdu.svh:72:25: Operator VAR 'SCR1_TDU_MCONTROL_TYPE_VAL' expects 4 bits on the Initial value, but Initial value's CONST '2'h2' generates 2 bits.
+                                                                : ... note: In instance 'scr1_top_tb_ahb'
+   72 |                         SCR1_TDU_MCONTROL_TYPE_VAL           = 2'd2;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+                      /work/scr1/src/core/pipeline/scr1_pipe_tdu.sv:36:1: ... note: In file included from 'scr1_pipe_tdu.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_tdu.svh:78:25: Operator VAR 'SCR1_TDU_MCONTROL_MASKMAX_VAL' expects 6 bits on the Initial value, but Initial value's CONST '1'h0' generates 1 bits.
+                                                                : ... note: In instance 'scr1_top_tb_ahb'
+   78 |                         SCR1_TDU_MCONTROL_MASKMAX_VAL        = 1'b0;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      /work/scr1/src/core/pipeline/scr1_pipe_tdu.sv:36:1: ... note: In file included from 'scr1_pipe_tdu.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_tdu.svh:98:25: Operator VAR 'SCR1_TDU_ICOUNT_TYPE_VAL' expects 4 bits on the Initial value, but Initial value's CONST '2'h3' generates 2 bits.
+                                                                : ... note: In instance 'scr1_top_tb_ahb'
+   98 |                         SCR1_TDU_ICOUNT_TYPE_VAL             = 2'd3;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~
+                      /work/scr1/src/core/pipeline/scr1_pipe_tdu.sv:36:1: ... note: In file included from 'scr1_pipe_tdu.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/includes/scr1_tdu.svh:101:25: Operator VAR 'SCR1_TDU_ICOUNT_RESERVEDB_VAL' expects 2 bits on the Initial value, but Initial value's CONST '1'h0' generates 1 bits.
+                                                                 : ... note: In instance 'scr1_top_tb_ahb'
+  101 |                         SCR1_TDU_ICOUNT_RESERVEDB_VAL        = 1'b0;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      /work/scr1/src/core/pipeline/scr1_pipe_tdu.sv:36:1: ... note: In file included from 'scr1_pipe_tdu.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/core/pipeline/scr1_pipe_ialu.sv:409:30: Operator COND expects 64 bits on the Conditional False, but Conditional False's SIGNED generates 1 bits.
+                                                                           : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_exu.i_ialu'
+  409 | assign mul_res = mdu_cmd_mul ? mul_op1 * mul_op2                           : $signed('0);
+      |                              ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/pipeline/scr1_pipe_ialu.sv:467:23: Operator COND expects 32 bits on the Conditional True, but Conditional True's REPLICATE generates 2 bits.
+                                                                           : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_exu.i_ialu'
+  467 |                       ? {'0, div_quo_bit}
+      |                       ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/pipeline/scr1_pipe_ialu.sv:506:40: Operator COND expects 33 bits on the Conditional True, but Conditional True's SIGNED generates 2 bits.
+                                                                           : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_exu.i_ialu'
+  506 |                         : mdu_fsm_idle ? $signed({div_op1_is_neg, exu2ialu_main_op1_i[32-1]})
+      |                                        ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/pipeline/scr1_pipe_ialu.sv:596:58: Operator XOR expects 32 bits on the LHS, but LHS's SEL generates 1 bits.
+                                                                           : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_exu.i_ialu'
+  596 |             ialu2exu_main_res_o = 32'(~(main_sum_flags.s ^ main_sum_flags.o));
+      |                                                          ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/pipeline/scr1_pipe_ialu.sv:596:58: Operator XOR expects 32 bits on the RHS, but RHS's SEL generates 1 bits.
+                                                                           : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_exu.i_ialu'
+  596 |             ialu2exu_main_res_o = 32'(~(main_sum_flags.s ^ main_sum_flags.o));
+      |                                                          ^
+%Warning-ASCRANGE: /work/scr1/src/core/pipeline/scr1_pipe_mprf.sv:63:18: Ascending bit range vector: left < right of bit range: [1:31]
+                                                                       : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_mprf'
+   63 | type_scr1_mprf_v [1:32-1]                  mprf_int;
+      |                  ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/pipeline/scr1_pipe_ifu.sv:450:79: Operator SUB expects 32 bits on the LHS, but LHS's VARREF 'q_wptr' generates 3 bits.
+                                                                          : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_ifu'
+  450 | assign q_free_h_next    = SCR1_IFU_Q_FREE_H_W'(SCR1_IFU_Q_SIZE_HALF - (q_wptr - q_rptr_next));
+      |                                                                               ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/pipeline/scr1_pipe_ifu.sv:450:79: Operator SUB expects 32 bits on the RHS, but RHS's VARREF 'q_rptr_next' generates 3 bits.
+                                                                          : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_ifu'
+  450 | assign q_free_h_next    = SCR1_IFU_Q_FREE_H_W'(SCR1_IFU_Q_SIZE_HALF - (q_wptr - q_rptr_next));
+      |                                                                               ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/pipeline/scr1_pipe_ifu.sv:531:89: Operator ADD expects 4 bits on the RHS, but RHS's VARREF 'imem_handshake_done' generates 1 bits.
+                                                                          : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_ifu'
+  531 |                                              : {imem_addr_ff[32-1:6], imem_addr_ff[5:2] + imem_handshake_done};
+      |                                                                                         ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/pipeline/scr1_pipe_ifu.sv:529:89: Operator ADD expects 30 bits on the RHS, but RHS's VARREF 'imem_handshake_done' generates 1 bits.
+                                                                          : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_ifu'
+  529 | assign imem_addr_next = exu2ifu_pc_new_req_i ? exu2ifu_pc_new_i[32-1:2]                 + imem_handshake_done
+      |                                                                                         ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/pipeline/scr1_pipe_ifu.sv:530:97: Operator ADD expects 30 bits on the RHS, but RHS's VARREF 'imem_handshake_done' generates 1 bits.
+                                                                          : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_ifu'
+  530 |                       : &imem_addr_ff[5:2]   ? imem_addr_ff                                     + imem_handshake_done
+      |                                                                                                 ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/pipeline/scr1_pipe_ifu.sv:553:74: Operator SUB expects 3 bits on the LHS, but LHS's VARREF 'imem_handshake_done' generates 1 bits.
+                                                                          : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_ifu'
+  553 | assign imem_pnd_txns_cnt_next = imem_pnd_txns_cnt + (imem_handshake_done - imem_resp_received);
+      |                                                                          ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/pipeline/scr1_pipe_ifu.sv:553:74: Operator SUB expects 3 bits on the RHS, but RHS's VARREF 'imem_resp_received' generates 1 bits.
+                                                                          : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_ifu'
+  553 | assign imem_pnd_txns_cnt_next = imem_pnd_txns_cnt + (imem_handshake_done - imem_resp_received);
+      |                                                                          ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/pipeline/scr1_pipe_ifu.sv:581:87: Operator SUB expects 3 bits on the RHS, but RHS's VARREF 'imem_handshake_done' generates 1 bits.
+                                                                          : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_ifu'
+  581 | assign imem_resp_discard_cnt_next = exu2ifu_pc_new_req_i     ? imem_pnd_txns_cnt_next - imem_handshake_done
+      |                                                                                       ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/pipeline/scr1_pipe_exu.sv:939:26: Operator COND expects 32 bits on the Conditional False, but Conditional False's REPLICATE generates 6 bits.
+                                                                          : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_exu'
+  939 |                          ? mprf2exu_rs1_data_i
+      |                          ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/pipeline/scr1_ipic.sv:396:38: Operator COND expects 5 bits on the Conditional False, but Conditional False's CONST '1'h0' generates 1 bits.
+                                                                      : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_ipic'
+  396 |                       : ipic_eoi_req ? irq_eoi_req_vd ? {1'b0, irq_eoi_req_idx}
+      |                                      ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/pipeline/scr1_pipe_tdu.sv:173:33: Operator ASSIGN expects 32 bits on the Assign RHS, but Assign RHS's REPLICATE generates 4 bits.
+                                                                          : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_tdu'
+  173 |                 tdu2csr_rdata_o = {'0, csr_tselect_ff};
+      |                                 ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/pipeline/scr1_pipe_tdu.sv:226:40: Bit extraction of var[31:0] requires 5 bit index, not 4 bits.
+                                                                          : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_tdu'
+  226 |                         tdu2csr_rdata_o[SCR1_TDU_MCONTROL_TYPE_VAL] = 1'b1;
+      |                                        ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/pipeline/scr1_pipe_tdu.sv:231:36: Bit extraction of var[31:0] requires 5 bit index, not 4 bits.
+                                                                          : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_tdu'
+  231 |                     tdu2csr_rdata_o[SCR1_TDU_ICOUNT_TYPE_VAL] = 1'b1;
+      |                                    ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/pipeline/scr1_pipe_hdu.sv:550:43: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'pbuf_addr_ff' generates 3 bits.
+                                                                          : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_hdu'
+  550 | assign pbuf_addr_end      = (pbuf_addr_ff == (SCR1_HDU_PBUF_ADDR_SPAN-1));
+      |                                           ^~
+%Warning-WIDTHEXPAND: /work/scr1/src/core/pipeline/scr1_pipe_hdu.sv:711:24: Operator ASSIGNDLY expects 3 bits on the Assign RHS, but Assign RHS's CONST '1'h0' generates 1 bits.
+                                                                          : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_hdu'
+  711 |         csr_dcsr_cause <= 1'b0;
+      |                        ^~
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dmi.sv:101:47: Operator EQ expects 2 bits on the RHS, but RHS's CONST '1'h1' generates 1 bits.
+                                                            : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dmi'
+  101 | assign tapc_dtmcs_sel = (tapcsync2dmi_ch_id_i == 1'd1);
+      |                                               ^~
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dmi.sv:108:21: Bit extraction of var[40:0] requires 6 bit index, not 5 bits.
+                                                            : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dmi'
+  108 |         tap_dr_rdata[DTMCS_RESERVEDB_HI:DTMCS_RESERVEDB_LO] = 'b0;
+      |                     ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dmi.sv:109:21: Bit extraction of var[40:0] requires 6 bit index, not 5 bits.
+                                                            : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dmi'
+  109 |         tap_dr_rdata[DTMCS_DMIHARDRESET]                    = 'b0;
+      |                     ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dmi.sv:110:21: Bit extraction of var[40:0] requires 6 bit index, not 5 bits.
+                                                            : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dmi'
+  110 |         tap_dr_rdata[DTMCS_DMIRESET]                        = 'b0;
+      |                     ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dmi.sv:111:21: Bit extraction of var[40:0] requires 6 bit index, not 5 bits.
+                                                            : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dmi'
+  111 |         tap_dr_rdata[DTMCS_RESERVEDA]                       = 'b0;
+      |                     ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dmi.sv:112:21: Bit extraction of var[40:0] requires 6 bit index, not 5 bits.
+                                                            : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dmi'
+  112 |         tap_dr_rdata[DTMCS_IDLE_HI:DTMCS_IDLE_LO]           = 'b0;
+      |                     ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dmi.sv:113:21: Bit extraction of var[40:0] requires 6 bit index, not 5 bits.
+                                                            : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dmi'
+  113 |         tap_dr_rdata[DTMCS_DMISTAT_HI:DTMCS_DMISTAT_LO]     = 'b0;
+      |                     ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dmi.sv:114:21: Bit extraction of var[40:0] requires 6 bit index, not 5 bits.
+                                                            : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dmi'
+  114 |         tap_dr_rdata[DTMCS_ABITS_HI  :DTMCS_ABITS_LO]       = SCR1_DBG_DMI_ADDR_WIDTH;
+      |                     ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dmi.sv:115:21: Bit extraction of var[40:0] requires 6 bit index, not 5 bits.
+                                                            : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dmi'
+  115 |         tap_dr_rdata[DTMCS_VERSION_LO]                      = 1'b1;
+      |                     ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dmi.sv:119:21: Bit extraction of var[40:0] requires 6 bit index, not 5 bits.
+                                                            : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dmi'
+  119 |         tap_dr_rdata[DMI_OP_HI  :DMI_OP_LO]                 = 'b0;
+      |                     ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dmi.sv:156:28: Operator ASSIGN expects 7 bits on the Assign RHS, but Assign RHS's CONST '1'h0' generates 1 bits.
+                                                            : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dmi'
+  156 |     dmi2dm_addr_o          = 1'b0;
+      |                            ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dmi.sv:157:28: Operator ASSIGN expects 32 bits on the Assign RHS, but Assign RHS's CONST '1'h0' generates 1 bits.
+                                                            : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dmi'
+  157 |     dmi2dm_wdata_o         = 1'b0;
+      |                            ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dmi.sv:160:35: Bit extraction of var[40:0] requires 6 bit index, not 5 bits.
+                                                            : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dmi'
+  160 |         dmi2dm_req_o   = tap_dr_ff[DMI_OP_HI  :DMI_OP_LO] != 2'b00;
+      |                                   ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dmi.sv:161:35: Bit extraction of var[40:0] requires 6 bit index, not 5 bits.
+                                                            : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dmi'
+  161 |         dmi2dm_wr_o    = tap_dr_ff[DMI_OP_HI  :DMI_OP_LO] == 2'b10;
+      |                                   ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dm.sv:465:64: Operator ASSIGN expects 9 bits on the Assign RHS, but Assign RHS's VARREF 'DMSTATUS_RESERVEDC' generates 1 bits.
+                                                           : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dm'
+  465 |                            SCR1_DBG_DMSTATUS_RESERVEDC_LO]     = DMSTATUS_RESERVEDC;
+      |                                                                ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dm.sv:468:64: Operator ASSIGN expects 2 bits on the Assign RHS, but Assign RHS's VARREF 'DMSTATUS_RESERVEDB' generates 1 bits.
+                                                           : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dm'
+  468 |                            SCR1_DBG_DMSTATUS_RESERVEDB_LO]     = DMSTATUS_RESERVEDB;
+      |                                                                ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dm.sv:486:64: Operator ASSIGN expects 4 bits on the Assign RHS, but Assign RHS's VARREF 'DMSTATUS_VERSION' generates 2 bits.
+                                                           : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dm'
+  486 |                            SCR1_DBG_DMSTATUS_VERSION_LO]       = DMSTATUS_VERSION;
+      |                                                                ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dm.sv:497:64: Operator ASSIGN expects 10 bits on the Assign RHS, but Assign RHS's VARREF 'DMCONTROL_HARTSELLO' generates 1 bits.
+                                                           : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dm'
+  497 |                            SCR1_DBG_DMCONTROL_HARTSELLO_LO]    = DMCONTROL_HARTSELLO;
+      |                                                                ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dm.sv:499:64: Operator ASSIGN expects 10 bits on the Assign RHS, but Assign RHS's VARREF 'DMCONTROL_HARTSELHI' generates 1 bits.
+                                                           : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dm'
+  499 |                            SCR1_DBG_DMCONTROL_HARTSELHI_LO]    = DMCONTROL_HARTSELHI;
+      |                                                                ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dm.sv:501:64: Operator ASSIGN expects 4 bits on the Assign RHS, but Assign RHS's VARREF 'DMCONTROL_RESERVEDA' generates 1 bits.
+                                                           : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dm'
+  501 |                            SCR1_DBG_DMCONTROL_RESERVEDA_LO]    = DMCONTROL_RESERVEDA;
+      |                                                                ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dm.sv:508:64: Operator ASSIGN expects 3 bits on the Assign RHS, but Assign RHS's VARREF 'ABSTRACTCS_RESERVEDD' generates 1 bits.
+                                                           : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dm'
+  508 |                            SCR1_DBG_ABSTRACTCS_RESERVEDD_LO]   = ABSTRACTCS_RESERVEDD;
+      |                                                                ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dm.sv:512:64: Operator ASSIGN expects 11 bits on the Assign RHS, but Assign RHS's VARREF 'ABSTRACTCS_RESERVEDC' generates 1 bits.
+                                                           : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dm'
+  512 |                            SCR1_DBG_ABSTRACTCS_RESERVEDC_LO]   = ABSTRACTCS_RESERVEDC;
+      |                                                                ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dm.sv:518:64: Operator ASSIGN expects 4 bits on the Assign RHS, but Assign RHS's VARREF 'ABSTRACTCS_RESERVEDA' generates 1 bits.
+                                                           : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dm'
+  518 |                            SCR1_DBG_ABSTRACTCS_RESERVEDA_LO]   = ABSTRACTCS_RESERVEDA;
+      |                                                                ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dm.sv:525:64: Operator ASSIGN expects 8 bits on the Assign RHS, but Assign RHS's VARREF 'HARTINFO_RESERVEDB' generates 1 bits.
+                                                           : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dm'
+  525 |                            SCR1_DBG_HARTINFO_RESERVEDB_LO]     = HARTINFO_RESERVEDB;
+      |                                                                ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dm.sv:529:64: Operator ASSIGN expects 3 bits on the Assign RHS, but Assign RHS's VARREF 'HARTINFO_RESERVEDA' generates 1 bits.
+                                                           : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dm'
+  529 |                            SCR1_DBG_HARTINFO_RESERVEDA_LO]     = HARTINFO_RESERVEDA;
+      |                                                                ^
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dm.sv:756:49: Operator EQ expects 8 bits on the RHS, but RHS's VARREF 'ABS_CMD_HARTREG' generates 1 bits.
+                                                           : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dm'
+  756 | assign abs_cmd_hartreg_vd       = (abs_cmd_type == ABS_CMD_HARTREG) & abs_cmd_regvalid;
+      |                                                 ^~
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dm.sv:757:49: Operator EQ expects 8 bits on the RHS, but RHS's VARREF 'ABS_CMD_HARTMEM' generates 2 bits.
+                                                           : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dm'
+  757 | assign abs_cmd_hartmem_vd       = (abs_cmd_type == ABS_CMD_HARTMEM) & abs_cmd_memvalid;
+      |                                                 ^~
+%Warning-WIDTHEXPAND: /work/scr1/src/core/scr1_dm.sv:1135:40: Operator AND expects 3 bits on the LHS, but LHS's CASTWRAP generates 1 bits.
+                                                            : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_dm'
+ 1135 |                                        & (~dmi2dm_wdata_i[SCR1_DBG_ABSTRACTCS_CMDERR_HI:
+      |                                        ^
+%Warning-WIDTHTRUNC: /work/scr1/src/tb/scr1_memory_tb_ahb.sv:106:21: Operator ASSIGN expects 20 bits on the Assign RHS, but Assign RHS's VARREF 'addr' generates 32 bits.
+                                                                   : ... note: In instance 'scr1_top_tb_ahb.i_memory_tb'
+  106 |         addr_mirage = addr;
+      |                     ^
+%Warning-WIDTHEXPAND: /work/scr1/src/tb/scr1_memory_tb_ahb.sv:111:65: Operator ADD expects 32 bits on the LHS, but LHS's VARREF 'addr_mirage' generates 20 bits.
+                                                                    : ... note: In instance 'scr1_top_tb_ahb.i_memory_tb'
+  111 |                                             : mirage[addr_mirage+i]
+      |                                                                 ^
+%Warning-WIDTHTRUNC: /work/scr1/src/tb/scr1_memory_tb_ahb.sv:132:29: Operator ASSIGN expects 20 bits on the Assign RHS, but Assign RHS's VARREF 'addr' generates 32 bits.
+                                                                   : ... note: In instance 'scr1_top_tb_ahb.i_memory_tb'
+  132 |                 addr_mirage = addr;
+      |                             ^
+%Warning-WIDTHEXPAND: /work/scr1/src/tb/scr1_memory_tb_ahb.sv:133:35: Operator ADD expects 32 bits on the LHS, but LHS's VARREF 'addr_mirage' generates 20 bits.
+                                                                    : ... note: In instance 'scr1_top_tb_ahb.i_memory_tb'
+  133 |                 mirage[addr_mirage+i] <= data[(8*(i+1)-1)-:8];
+      |                                   ^
+%Warning-WIDTHEXPAND: /work/scr1/src/tb/scr1_memory_tb_ahb.sv:146:5: Operator CASE expects 3 bits on the Case expression, but Case expression's VARREF 'hsize' generates 2 bits.
+                                                                   : ... note: In instance 'scr1_top_tb_ahb.i_memory_tb'
+  146 |     case (hsize)
+      |     ^~~~
+%Warning-WIDTHTRUNC: /work/scr1/src/tb/scr1_memory_tb_ahb.sv:198:30: Operator ASSIGNDLY expects 1 bits on the Assign RHS, but Assign RHS's RAND generates 32 bits.
+                                                                   : ... note: In instance 'scr1_top_tb_ahb.i_memory_tb'
+  198 |             imem_req_ack_rnd <= $random;
+      |                              ^~
+%Warning-WIDTHTRUNC: /work/scr1/src/tb/scr1_memory_tb_ahb.sv:255:18: Operator FUNCREF 'scr1_be_form' expects 2 bits on the Function Argument, but Function Argument's VARREF 'imem_hsize' generates 3 bits.
+                                                                   : ... note: In instance 'scr1_top_tb_ahb.i_memory_tb'
+  255 | assign imem_be = scr1_be_form(2'b00, imem_hsize);
+      |                  ^~~~~~~~~~~~
+%Warning-WIDTHTRUNC: /work/scr1/src/tb/scr1_memory_tb_ahb.sv:344:30: Operator ASSIGNDLY expects 1 bits on the Assign RHS, but Assign RHS's RAND generates 32 bits.
+                                                                   : ... note: In instance 'scr1_top_tb_ahb.i_memory_tb'
+  344 |             dmem_req_ack_rnd <= $random;
+      |                              ^~
+%Warning-WIDTHTRUNC: /work/scr1/src/tb/scr1_memory_tb_ahb.sv:413:18: Operator FUNCREF 'scr1_be_form' expects 2 bits on the Function Argument, but Function Argument's VARREF 'dmem_hsize' generates 3 bits.
+                                                                   : ... note: In instance 'scr1_top_tb_ahb.i_memory_tb'
+  413 | assign dmem_be = scr1_be_form(dmem_haddr[1:0], dmem_hsize);
+      |                  ^~~~~~~~~~~~
+%Warning-WIDTHTRUNC: /work/scr1/src/tb/scr1_top_tb_ahb.sv:112:24: Operator ASSIGN expects 23 bits on the Assign RHS, but Assign RHS's CONST '?32?h61726368' generates 32 or 31 bits.
+                                                                : ... note: In instance 'scr1_top_tb_ahb'
+  112 |     pattern_arch       = 'h61726368;              
+      |                        ^
+%Warning-WIDTHEXPAND: /work/scr1/src/tb/scr1_top_tb_ahb.sv:127:9: Operator ASSIGN expects 32 bits on the Assign RHS, but Assign RHS's VARREF 'res' generates 1 bits.
+                                                                : ... note: In instance 'scr1_top_tb_ahb'
+  127 |         return res;
+      |         ^~~~~~
+%Warning-WIDTHTRUNC: /work/scr1/src/tb/scr1_top_tb_ahb.sv:165:24: Operator ASSIGN expects 23 bits on the Assign RHS, but Assign RHS's CONST '?32?h61726368' generates 32 or 31 bits.
+                                                                : ... note: In instance 'scr1_top_tb_ahb'
+  165 |     pattern_arch       = 'h61726368;              
+      |                        ^
+%Warning-STMTDLY: /work/scr1/src/tb/scr1_top_tb_ahb.sv:266:5: Ignoring delay on this statement due to --no-timing
+                                                            : ... note: In instance 'scr1_top_tb_ahb'
+  266 |     #900ns trst_n   = 1'b1;
+      |     ^
+%Warning-STMTDLY: /work/scr1/src/tb/scr1_top_tb_ahb.sv:267:5: Ignoring delay on this statement due to --no-timing
+                                                            : ... note: In instance 'scr1_top_tb_ahb'
+  267 |     #500ns tms      = 1'b1;
+      |     ^
+%Warning-STMTDLY: /work/scr1/src/tb/scr1_top_tb_ahb.sv:268:5: Ignoring delay on this statement due to --no-timing
+                                                            : ... note: In instance 'scr1_top_tb_ahb'
+  268 |     #800ns tms      = 1'b0;
+      |     ^
+%Warning-STMTDLY: /work/scr1/src/tb/scr1_top_tb_ahb.sv:269:5: Ignoring delay on this statement due to --no-timing
+                                                            : ... note: In instance 'scr1_top_tb_ahb'
+  269 |     #500ns trst_n   = 1'b0;
+      |     ^
+%Warning-STMTDLY: /work/scr1/src/tb/scr1_top_tb_ahb.sv:270:5: Ignoring delay on this statement due to --no-timing
+                                                            : ... note: In instance 'scr1_top_tb_ahb'
+  270 |     #100ns tms      = 1'b1;
+      |     ^
+%Warning-WIDTHEXPAND: /work/scr1/src/tb/scr1_top_tb_runtests.sv:133:48: Operator AND expects 32 bits on the LHS, but LHS's VARREF 'test_pass' generates 1 bits.
+                                                                      : ... note: In instance 'scr1_top_tb_ahb'
+  133 |                     tests_passed += (test_pass & !test_error);
+      |                                                ^
+                      /work/scr1/src/tb/scr1_top_tb_ahb.sv:281:1: ... note: In file included from 'scr1_top_tb_ahb.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/tb/scr1_top_tb_runtests.sv:133:48: Operator AND expects 32 bits on the RHS, but RHS's LOGNOT generates 1 bits.
+                                                                      : ... note: In instance 'scr1_top_tb_ahb'
+  133 |                     tests_passed += (test_pass & !test_error);
+      |                                                ^
+                      /work/scr1/src/tb/scr1_top_tb_ahb.sv:281:1: ... note: In file included from 'scr1_top_tb_ahb.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/tb/scr1_top_tb_runtests.sv:145:47: Operator AND expects 32 bits on the LHS, but LHS's VARREF 'test_pass' generates 1 bits.
+                                                                      : ... note: In instance 'scr1_top_tb_ahb'
+  145 |                 tests_passed    += (test_pass & !test_error);
+      |                                               ^
+                      /work/scr1/src/tb/scr1_top_tb_ahb.sv:281:1: ... note: In file included from 'scr1_top_tb_ahb.sv'
+%Warning-WIDTHEXPAND: /work/scr1/src/tb/scr1_top_tb_runtests.sv:145:47: Operator AND expects 32 bits on the RHS, but RHS's LOGNOT generates 1 bits.
+                                                                      : ... note: In instance 'scr1_top_tb_ahb'
+  145 |                 tests_passed    += (test_pass & !test_error);
+      |                                               ^
+                      /work/scr1/src/tb/scr1_top_tb_ahb.sv:281:1: ... note: In file included from 'scr1_top_tb_ahb.sv'
+%Warning-WIDTHTRUNC: /work/scr1/src/tb/scr1_top_tb_runtests.sv:47:13: Logical operator IF expects 1 bit on the If, but If's FUNCREF 'identify_test' generates 32 bits.
+                                                                    : ... note: In instance 'scr1_top_tb_ahb'
+   47 |             if (identify_test(test_file)) begin
+      |             ^~
+                     /work/scr1/src/tb/scr1_top_tb_ahb.sv:281:1: ... note: In file included from 'scr1_top_tb_ahb.sv'
+%Warning-WIDTHTRUNC: /work/scr1/src/tb/scr1_top_tb_runtests.sv:164:9: Logical operator IF expects 1 bit on the If, but If's FGETS generates 32 bits.
+                                                                    : ... note: In instance 'scr1_top_tb_ahb'
+  164 |         if ($fgets(test_file,f_info)) begin
+      |         ^~
+                     /work/scr1/src/tb/scr1_top_tb_ahb.sv:281:1: ... note: In file included from 'scr1_top_tb_ahb.sv'
+%Warning-WIDTHTRUNC: /work/scr1/src/tb/scr1_top_tb_runtests.sv:162:9: Logical operator IF expects 1 bit on the If, but If's VARREF 'f_info' generates 32 bits.
+                                                                    : ... note: In instance 'scr1_top_tb_ahb'
+  162 |         if (f_info) begin
+      |         ^~
+                     /work/scr1/src/tb/scr1_top_tb_ahb.sv:281:1: ... note: In file included from 'scr1_top_tb_ahb.sv'
+%Warning-UNSIGNED: /work/scr1/src/core/pipeline/scr1_pipe_ifu.sv:788:28: Comparison is constant due to unsigned arithmetic
+                                                                       : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_ifu'
+  788 |     (imem_resp_discard_cnt >= 0) & (imem_resp_discard_cnt <= imem_pnd_txns_cnt)
+      |                            ^~
+%Warning-UNSIGNED: /work/scr1/src/core/pipeline/scr1_pipe_idu.sv:928:30: Comparison is constant due to unsigned arithmetic
+                                                                       : ... note: In instance 'scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_idu'
+  928 |     ((idu2exu_cmd_o.ialu_cmd >= SCR1_IALU_CMD_NONE) &
+      |                              ^~
+%Warning-CASEINCOMPLETE: /work/scr1/src/core/pipeline/scr1_pipe_ifu.sv:426:9: Case values incompletely covered (example pattern 0x0)
+  426 |         case (q_wr_size)
+      |         ^~~~
+%Warning-CASEINCOMPLETE: /work/scr1/src/core/pipeline/scr1_pipe_ialu.sv:352:9: Case values incompletely covered (example pattern 0x3)
+  352 |         case (mdu_fsm_ff)
+      |         ^~~~
+%Warning-CASEINCOMPLETE: /work/scr1/src/core/pipeline/scr1_pipe_ialu.sv:634:13: Case values incompletely covered (example pattern 0x3)
+  634 |             case (mdu_fsm_ff)
+      |             ^~~~
+%Warning-CASEINCOMPLETE: /work/scr1/src/core/scr1_dm.sv:821:5: Case values incompletely covered (example pattern 0xd)
+  821 |     case (abs_fsm_ff)
+      |     ^~~~
+%Warning-CASEINCOMPLETE: /work/scr1/src/tb/scr1_memory_tb_ahb.sv:146:5: Case values incompletely covered (example pattern 0x3)
+  146 |     case (hsize)
+      |     ^~~~
+%Warning-MULTIDRIVEN: /work/scr1/src/core/scr1_tapc_synchronizer.sv:60:17: Signal has multiple driving blocks with different clocking: 'scr1_top_tb_ahb.i_top.i_core_top.i_tapc_synchronizer.dmi_ch_capture_sync'
+                      /work/scr1/src/core/scr1_tapc_synchronizer.sv:126:9: ... Location of first driving block
+  126 |         dmi_ch_capture_sync[2:1] <= {dmi_ch_capture_sync[1], dmi_ch_capture_sync[0]};
+      |         ^~~~~~~~~~~~~~~~~~~
+                      /work/scr1/src/core/scr1_tapc_synchronizer.sv:116:9: ... Location of other driving block
+  116 |         dmi_ch_capture_sync[0] <= tapc2tapcsync_ch_capture_i;
+      |         ^~~~~~~~~~~~~~~~~~~
+%Warning-MULTIDRIVEN: /work/scr1/src/core/scr1_tapc_synchronizer.sv:61:17: Signal has multiple driving blocks with different clocking: 'scr1_top_tb_ahb.i_top.i_core_top.i_tapc_synchronizer.dmi_ch_shift_sync'
+                      /work/scr1/src/core/scr1_tapc_synchronizer.sv:127:9: ... Location of first driving block
+  127 |         dmi_ch_shift_sync[2:1]   <= {dmi_ch_shift_sync[1], dmi_ch_shift_sync[0]};
+      |         ^~~~~~~~~~~~~~~~~
+                      /work/scr1/src/core/scr1_tapc_synchronizer.sv:117:9: ... Location of other driving block
+  117 |         dmi_ch_shift_sync[0]   <= tapc2tapcsync_ch_shift_i;
+      |         ^~~~~~~~~~~~~~~~~
+%Warning-MULTIDRIVEN: /work/scr1/src/top/scr1_timer.sv:65:53: Signal has multiple driving blocks with different clocking: 'scr1_top_tb_ahb.i_top.i_timer.rtc_sync'
+                      /work/scr1/src/top/scr1_timer.sv:204:13: ... Location of first driving block
+  204 |             rtc_sync[3:1]   <= rtc_sync[2:0];
+      |             ^~~~~~~~
+                      /work/scr1/src/top/scr1_timer.sv:194:13: ... Location of other driving block
+  194 |             rtc_sync[0] <= ~rtc_sync[0];
+      |             ^~~~~~~~
+- V e r i l a t i o n   R e p o r t: Verilator 5.030 2024-10-27 rev v5.030
+- Verilator: Built from 16.822 MB sources in 38 modules, into 2.196 MB in 12 C++ files needing 0.004 MB
+- Verilator: Walltime 0.649 s (elab=0.064, cvt=0.254, bld=0.000); cpu 0.625 s on 1 threads; alloced 37.492 MB
+make[2]: Entering directory '/work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/verilator'
+g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -Os  -c -o scr1_ahb_wrapper.o /work/scr1/sim/verilator_wrap/scr1_ahb_wrapper.c
+g++ -Os  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -c -o verilated.o /usr/local/share/verilator/include/verilated.cpp
+g++ -Os  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -c -o verilated_threads.o /usr/local/share/verilator/include/verilated_threads.cpp
+g++ -Os  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -x c++-header Vscr1_top_tb_ahb__pch.h -o Vscr1_top_tb_ahb__pch.h.fast.gch
+g++ -Os  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -include Vscr1_top_tb_ahb__pch.h.fast -c -o Vscr1_top_tb_ahb.o Vscr1_top_tb_ahb.cpp
+g++ -Os  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -include Vscr1_top_tb_ahb__pch.h.fast -c -o Vscr1_top_tb_ahb___024root__DepSet_h46df07de__0.o Vscr1_top_tb_ahb___024root__DepSet_h46df07de__0.cpp
+g++ -Os  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -include Vscr1_top_tb_ahb__pch.h.fast -c -o Vscr1_top_tb_ahb___024root__DepSet_h757a5413__0.o Vscr1_top_tb_ahb___024root__DepSet_h757a5413__0.cpp
+g++ -Os  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -include Vscr1_top_tb_ahb__pch.h.fast -c -o Vscr1_top_tb_ahb___024root__DepSet_h757a5413__1.o Vscr1_top_tb_ahb___024root__DepSet_h757a5413__1.cpp
+g++   -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -x c++-header Vscr1_top_tb_ahb__pch.h -o Vscr1_top_tb_ahb__pch.h.slow.gch
+g++   -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -include Vscr1_top_tb_ahb__pch.h.slow -c -o Vscr1_top_tb_ahb__ConstPool_0.o Vscr1_top_tb_ahb__ConstPool_0.cpp
+g++   -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -include Vscr1_top_tb_ahb__pch.h.slow -c -o Vscr1_top_tb_ahb___024root__Slow.o Vscr1_top_tb_ahb___024root__Slow.cpp
+g++   -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -include Vscr1_top_tb_ahb__pch.h.slow -c -o Vscr1_top_tb_ahb___024root__DepSet_h46df07de__0__Slow.o Vscr1_top_tb_ahb___024root__DepSet_h46df07de__0__Slow.cpp
+g++   -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -include Vscr1_top_tb_ahb__pch.h.slow -c -o Vscr1_top_tb_ahb___024root__DepSet_h757a5413__0__Slow.o Vscr1_top_tb_ahb___024root__DepSet_h757a5413__0__Slow.cpp
+g++   -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -include Vscr1_top_tb_ahb__pch.h.slow -c -o Vscr1_top_tb_ahb___024root__DepSet_h757a5413__1__Slow.o Vscr1_top_tb_ahb___024root__DepSet_h757a5413__1__Slow.cpp
+g++   -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -include Vscr1_top_tb_ahb__pch.h.slow -c -o Vscr1_top_tb_ahb___024unit__Slow.o Vscr1_top_tb_ahb___024unit__Slow.cpp
+g++   -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -include Vscr1_top_tb_ahb__pch.h.slow -c -o Vscr1_top_tb_ahb___024unit__DepSet_h792097e3__0__Slow.o Vscr1_top_tb_ahb___024unit__DepSet_h792097e3__0__Slow.cpp
+g++   -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -include Vscr1_top_tb_ahb__pch.h.slow -c -o Vscr1_top_tb_ahb__Syms.o Vscr1_top_tb_ahb__Syms.cpp
+echo "" > Vscr1_top_tb_ahb__ALL.verilator_deplist.tmp
+g++    scr1_ahb_wrapper.o verilated.o verilated_threads.o Vscr1_top_tb_ahb__ALL.a    -pthread -lpthread -latomic   -o Vscr1_top_tb_ahb
+rm Vscr1_top_tb_ahb__ALL.verilator_deplist.tmp
+make[2]: Leaving directory '/work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/verilator'
+make[1]: Leaving directory '/work/scr1/sim'
+printf "" > /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/test_results.txt;
+cd /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0; \
+echo scr1_top_tb_ahb | tee /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sim_results.txt; \
+/work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/verilator/Vscr1_top_tb_ahb \
++test_info=/work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/test_info \
++test_results=/work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/test_results.txt \
++imem_pattern=FFFFFFFF \
++dmem_pattern=FFFFFFFF \
+ | tee -a /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/sim_results.txt ;\
+printf "Simulation performed on $(verilator -version) \n" ;\
+printf "                          Test               | build | simulation \n" ; \
+printf "$(cat /work/scr1/build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_0/test_results.txt) \n"
+scr1_top_tb_ahb
+[0;34m---Test:                          add.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                         addi.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                          and.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                         andi.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                        auipc.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                          beq.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                          bge.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                         bgeu.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                          blt.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                         bltu.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                          bne.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                          csr.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                      fence_i.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                      illegal.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                          jal.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                         jalr.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                           lb.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                          lbu.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                           lh.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                          lhu.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                          lui.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                           lw.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                      ma_addr.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                     ma_fetch.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                         mcsr.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                           or.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                          ori.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                           sb.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                       sbreak.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                        scall.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                           sh.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                        shamt.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                       simple.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                          sll.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                         slli.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                          slt.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                         slti.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                        sltiu.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                         sltu.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                          sra.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                         srai.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                          srl.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                         srli.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                          sub.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                           sw.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                          xor.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                         xori.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                          div.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                         divu.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                          mul.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                         mulh.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                       mulhsu.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                        mulhu.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                          rem.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                         remu.hex[0m
+[0;32mTest passed[0m
+[0;34m---Test:                          rvc.hex[0m
+[0;32mTest passed[0m
+
+#--------------------------------------
+# Summary: 56/56 tests passed
+#--------------------------------------
+
+- /work/scr1/src/tb/scr1_top_tb_runtests.sv:199: Verilog $finish
+Simulation performed on Verilator 5.030 2024-10-27 rev v5.030 
+                          Test               | build | simulation 
+                         add.hex		OK	  PASS
+                        addi.hex		OK	  PASS
+                         and.hex		OK	  PASS
+                        andi.hex		OK	  PASS
+                       auipc.hex		OK	  PASS
+                         beq.hex		OK	  PASS
+                         bge.hex		OK	  PASS
+                        bgeu.hex		OK	  PASS
+                         blt.hex		OK	  PASS
+                        bltu.hex		OK	  PASS
+                         bne.hex		OK	  PASS
+                         csr.hex		OK	  PASS
+                     fence_i.hex		OK	  PASS
+                     illegal.hex		OK	  PASS
+                         jal.hex		OK	  PASS
+                        jalr.hex		OK	  PASS
+                          lb.hex		OK	  PASS
+                         lbu.hex		OK	  PASS
+                          lh.hex		OK	  PASS
+                         lhu.hex		OK	  PASS
+                         lui.hex		OK	  PASS
+                          lw.hex		OK	  PASS
+                     ma_addr.hex		OK	  PASS
+                    ma_fetch.hex		OK	  PASS
+                        mcsr.hex		OK	  PASS
+                          or.hex		OK	  PASS
+                         ori.hex		OK	  PASS
+                          sb.hex		OK	  PASS
+                      sbreak.hex		OK	  PASS
+                       scall.hex		OK	  PASS
+                          sh.hex		OK	  PASS
+                       shamt.hex		OK	  PASS
+                      simple.hex		OK	  PASS
+                         sll.hex		OK	  PASS
+                        slli.hex		OK	  PASS
+                         slt.hex		OK	  PASS
+                        slti.hex		OK	  PASS
+                       sltiu.hex		OK	  PASS
+                        sltu.hex		OK	  PASS
+                         sra.hex		OK	  PASS
+                        srai.hex		OK	  PASS
+                         srl.hex		OK	  PASS
+                        srli.hex		OK	  PASS
+                         sub.hex		OK	  PASS
+                          sw.hex		OK	  PASS
+                         xor.hex		OK	  PASS
+                        xori.hex		OK	  PASS
+                         div.hex		OK	  PASS
+                        divu.hex		OK	  PASS
+                         mul.hex		OK	  PASS
+                        mulh.hex		OK	  PASS
+                      mulhsu.hex		OK	  PASS
+                       mulhu.hex		OK	  PASS
+                         rem.hex		OK	  PASS
+                        remu.hex		OK	  PASS
+                         rvc.hex		OK	  PASS 
