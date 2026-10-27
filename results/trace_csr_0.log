@@ -1,0 +1,23 @@
+# Extracted from tracelog_core_0.log without changing data rows.
+# CSR snapshots selected by the Reg column; only events logged by SCR1.
+# RTL_ID 22011200
+#
+# Events:
+#    N - no event
+#    E - exception
+#    I - interrupt
+#    W - wakeup
+# =====================================================================================
+# : Core Reset
+# =====================================================================================
+# Test: illegal.hex
+#           Time   Ev  Curr_PC    Instr      Next_PC    Reg        Value     
+# =====================================================================================
+              36   E   00001004   00000000   00000b00   mstatus    00001800
+              36   E   00001004   00000000   00000b00   mepc       00001004
+              36   E   00001004   00000000   00000b00   mcause     00000002
+              36   E   00001004   00000000   00000b00   mtval      00000000
+             299   E   00001118   00000013   00000b00   mstatus    00001800
+             299   E   00001118   00000013   00000b00   mepc       00001118
+             299   E   00001118   00000013   00000b00   mcause     0000000b
+             299   E   00001118   00000013   00000b00   mtval      00000000
