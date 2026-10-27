@@ -389,5 +389,20 @@ scr1_memory_tb_ahb #(
     .dmem_hresp             (dmem_hresp )
 );
 
+// Наблюдение за исполнением DIV; подключение только к тестовому окружению.
+// synthesis translate_off
+scr1_tb_log_cmd i_log_cmd (
+    .clk         (i_top.i_core_top.i_pipe_top.i_pipe_exu.clk),
+    .rst_n       (i_top.i_core_top.i_pipe_top.i_pipe_exu.rst_n),
+    .valid_i     (i_top.i_core_top.i_pipe_top.i_pipe_exu.exu_queue_vd),
+    .cmd_i       (i_top.i_core_top.i_pipe_top.i_pipe_exu.exu_queue),
+    .pc_i        (i_top.i_core_top.i_pipe_top.i_pipe_exu.pc_curr_ff),
+    .operand1_i  (i_top.i_core_top.i_pipe_top.i_pipe_exu.ialu_main_op1),
+    .operand2_i  (i_top.i_core_top.i_pipe_top.i_pipe_exu.ialu_main_op2),
+    .writeback_i (i_top.i_core_top.i_pipe_top.i_pipe_exu.exu2mprf_w_req_o),
+    .result_i    (i_top.i_core_top.i_pipe_top.i_pipe_exu.exu2mprf_rd_data_o)
+);
+// synthesis translate_on
+
 endmodule : scr1_top_tb_ahb
 
