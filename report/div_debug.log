@@ -1,0 +1,9 @@
+[DIV] PC=0x000002a8 rs1=x1 rs2=x2 rd=x3 operand1=20 operand2=6 result=3
+[DIV] PC=0x000002c0 rs1=x1 rs2=x2 rd=x3 operand1=-20 operand2=6 result=-3
+[DIV] PC=0x000002d8 rs1=x1 rs2=x2 rd=x3 operand1=20 operand2=-6 result=-3
+[DIV] PC=0x000002f0 rs1=x1 rs2=x2 rd=x3 operand1=-20 operand2=-6 result=3
+[DIV] PC=0x00000308 rs1=x1 rs2=x2 rd=x3 operand1=-2147483648 operand2=1 result=-2147483648
+[DIV] PC=0x00000320 rs1=x1 rs2=x2 rd=x3 operand1=-2147483648 operand2=-1 result=-2147483648
+[DIV] PC=0x00000338 rs1=x1 rs2=x2 rd=x3 operand1=-2147483648 operand2=0 result=-1
+[DIV] PC=0x00000350 rs1=x1 rs2=x2 rd=x3 operand1=1 operand2=0 result=-1
+[DIV] PC=0x00000368 rs1=x1 rs2=x2 rd=x3 operand1=0 operand2=0 result=-1
