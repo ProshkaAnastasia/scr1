@@ -6,6 +6,7 @@
 \usepackage[russian]{babel}
 \usepackage{booktabs,longtable,array}
 \usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage{fancyvrb}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
@@ -51,22 +52,16 @@ Verilator 5.030. Симулятор собран из исходников со�
 git@github.com:ProshkaAnastasia/scr1.git
 \end{Code}
 Исходный репозиторий Syntacore сохранён как \texttt{upstream}.
-Создана ветка \texttt{lab\_scr1\_sim}. Изменения реализации зафиксированы
-коммитом \texttt{36b6433} (\texttt{Update trap\_vector and addresses});
-локальная ветка соответствует отслеживаемой \texttt{origin/lab\_scr1\_sim}
-на момент подготовки отчёта. Сам отчёт и результаты повторного запуска
-подготовлены позднее и требуют отдельного коммита.
+Работа выполнена в ветке \texttt{lab\_scr1\_sim}.
 
 \section{Исходная проверка и выбор одного теста}
 До изменения обработчика и адресов сохранён базовый прогон ISA-набора:
 \begin{Code}
 make TARGETS="riscv_isa"
 \end{Code}
-В файле \path{report/results/baseline/test_results.txt}
-содержится 56 результатов, все со статусом \texttt{OK PASS}.
-Это проверка всех тестов выбранного ISA-набора, а не подтверждение
-запуска остальных наборов, например CoreMark или compliance.
-Базовый журнал сохранён рядом как \texttt{baseline.log}.
+Все 56 тестов набора \texttt{riscv\_isa} прошли успешно.
+Результаты сохранены в \path{report/results/baseline/test_results.txt},
+журнал запуска --- в \texttt{baseline.log} в том же каталоге.
 
 Затем файл \path{sim/tests/riscv_isa/rv32_tests.inc} заменён строкой:
 \begin{Code}
@@ -373,15 +368,57 @@ build/verilator_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_1/
 \item Трасса CSR содержит \texttt{mcause=2}, \texttt{mepc=0x1004}
 и переход к \texttt{0xB00}; последующий \texttt{ecall} имеет причину 11.
 \end{enumerate}
-Отдельный запуск с диаграммой возможен командой:
+Для получения временной диаграммы используется режим генерации waveform:
 \begin{Code}
 make run_verilator_wf CFG=MAX BUS=AHB TARGETS=riscv_isa TRACE=1
 \end{Code}
-Он создаёт \texttt{simx.vcd} в каталоге конфигурации
-\texttt{verilator\_wf\_AHB\_MAX...}. Это способ дополнительной проверки,
-приведённый в примере методички. Диаграмма второй лабораторной в настоящем
-комплекте результатов не представлена; успешный запуск подтверждён
-текстовыми результатами, дизассемблированием и трассами.
+Файл \texttt{simx.vcd} открывается в GTKWave. На предоставленном снимке
+видны тактовый сигнал \texttt{clk}, признак действительной команды
+\texttt{exu\_queue\_vd} и адрес \texttt{pc\_curr\_ff} блока EXU.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth,trim={311bp 545bp 70bp 108bp},clip]{diagram.png}
+\caption{Переход от недопустимой инструкции по адресу 0x1004
+к общему обработчику по адресу 0xB00. Снимок GTKWave.}
+\label{fig:illegal-trap}
+\end{figure}
+
+Последовательность значений PC на рисунке включает \texttt{0x1000},
+\texttt{0x1004}, затем \texttt{0xB00}, \texttt{0xB04}, \texttt{0xB08}
+и последующие адреса обработчика. Адрес \texttt{0x1004} соответствует
+нулевому машинному слову в точке \texttt{bad2}; переход к \texttt{0xB00}
+согласуется с установленным Trap Vector. Причина исключения подтверждается
+отдельной трассой CSR: \texttt{mcause=2}, \texttt{mepc=0x1004}.
+Признак \texttt{exu\_queue\_vd} показывает наличие действительной команды,
+а не факт её завершения; значения PC при нулевом признаке не следует
+трактовать как исполнение инструкции.
+На этом снимке нет сигналов записи в порт \texttt{0xF0000000}, поэтому
+вывод строки подтверждается журналом симуляции, приведённым выше.
+
+\subsection{Вывод сообщения через порт симулятора}
+На снимке ниже шина \texttt{dmem\_hwdata} отображена в ASCII-представлении:
+последовательно читаются символы \texttt{incorrect instruction}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth,trim={311bp 400bp 195bp 108bp},clip]{diagram-3.png}
+\caption{Посимвольный вывод сообщения обработчика.}
+\end{figure}
+
+Обработчик читает байты строки и выполняет \texttt{sb} по адресу
+\texttt{0xF0000000}. Начало сообщения кодируется байтами
+\texttt{69 6E 63 6F 72 72 65 63 74 20} --- \texttt{incorrect} и пробел.
+На стороне ядра запрос принимается на фронте \texttt{clk}, когда
+\texttt{core\_dmem\_req=1} и \texttt{core\_dmem\_req\_ack=1}.
+\texttt{core\_dmem\_cmd} различает чтение символа и запись в порт.
+
+Сигналы \texttt{dmem\_hwrite} и \texttt{dmem\_hwdata} относятся к AHB.
+Адресная фаза и фаза данных разделены, поэтому их нельзя автоматически
+сопоставлять с текущим запросом ядра в тот же момент.
+В данном масштабе адресная шина слишком плотная для чтения каждого адреса;
+адрес порта подтверждается листингом, а снимок показывает передаваемую строку.
+Значение шины вне действительной передачи не означает новую запись.
 
 \section{Проверка выполнения пунктов задания}
 \begin{longtable}{p{0.07\linewidth}p{0.39\linewidth}p{0.45\linewidth}}
@@ -414,7 +451,7 @@ Reset Vector \texttt{0xF00}, Trap Vector \texttt{0xB00}. \\
 Создан файл с описанием и ссылками на подробные PDF и LaTeX
 в \texttt{report/}. \\
 9 & Коммит всех изменений &
-Реализация сохранена коммитом \texttt{36b6433}.
+Изменения реализации сохранены в рабочей ветке.
 Новые отчёт и артефакты на момент проверки ещё не включены в коммит. \\
 \bottomrule
 \end{longtable}
@@ -424,22 +461,6 @@ Reset Vector \texttt{0xF00}, Trap Vector \texttt{0xB00}. \\
 недостающие наборы и сохранить обновлённые материалы коммитом.
 Последующий прогон уже изменённого проекта нельзя выдавать за исходный
 прогон до изменений.
-
-При фиксации следует проверить \texttt{git status}: перенос базовых журналов
-из \texttt{lab\_scr1\_sim/results/} в \texttt{report/results/}
-должен попасть в коммит вместе с новыми файлами.
-Возможная последовательность после проверки содержимого:
-\begin{Code}
-git add sim/tests/riscv_isa/rv32_tests.inc
-git add sim/tests/common/riscv_macros.h sim/tests/common/link.ld
-git add src/includes/scr1_arch_description.svh
-git add -A report results lab_scr1_sim
-git diff --cached --stat
-git commit -m "Add lab 2 report and simulation results"
-git push origin lab_scr1_sim
-\end{Code}
-Эти команды приведены для завершения сдачи; автоматическое создание
-коммита и отправка изменений при подготовке отчёта не выполнялись.
 
 \section{Вывод}
 Обработка Illegal instruction дополнена выводом заданной строки с сохранением
