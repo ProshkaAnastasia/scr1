@@ -131,7 +131,7 @@
 \title{Лабораторная работа № 3}
 \usepackage{etoolbox}
 \makeatletter
-\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+\providecommand{\subtitle}[1]{% add subtitle to title
   \apptocmd{\@title}{\par {\large #1 \par}}{}{}
 }
 \makeatother
@@ -140,7 +140,44 @@
 \date{}
 
 \begin{document}
-\maketitle
+\begin{titlepage}
+\newgeometry{left=20mm,right=20mm,top=20mm,bottom=20mm}
+\thispagestyle{empty}
+\begingroup
+\fontspec{Times New Roman}
+\fontsize{14}{25}\selectfont
+\begin{center}
+Федеральное государственное автономное\\
+образовательное учреждение высшего образования\\
+«Национальный исследовательский университет ИТМО»
+
+\vspace{10mm}
+Факультет программной инженерии и компьютерной техники
+
+\vspace{34mm}
+\textbf{ОТЧЁТ}\\
+по лабораторной работе № 3\\
+по дисциплине «Проектирование систем на кристалле»\\
+«Анализ выполнения инструкции DIV в конвейере SCR1»\\
+Вариант 9
+\end{center}
+
+\vspace{43mm}
+\begin{flushright}
+Выполнила:\\
+Пронина Анастасия Ильинична\\
+Группа: P4130
+\end{flushright}
+
+\vfill
+\begin{center}
+Санкт-Петербург\\
+2026
+\end{center}
+\endgroup
+\end{titlepage}
+\restoregeometry
+\setcounter{page}{2}
 
 \section{1. Цель и
 задание}\label{ux446ux435ux43bux44c-ux438-ux437ux430ux434ux430ux43dux438ux435}
